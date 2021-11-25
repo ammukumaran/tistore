@@ -201,7 +201,7 @@ class TiQueryApp:
         token = token.strip()
         header = {"Authorization": 'Bearer ' + token, 'Content-Type': 'application/json',
                   'User-Agent': 'Mozilla/5.0'}
-        gpn = str(self.et_text.get())
+        gpn = str(self.et_text.get()).upper()
         gpn = gpn.strip()
         param = {'GenericProductIdentifier': gpn, 'Page': '0', 'Size': '25'}
         r = requests.get('https://transact.ti.com/v1/products/', headers=header, params=param)
@@ -226,7 +226,7 @@ class TiQueryApp:
         token = token.strip()
         header = {"Authorization": 'Bearer ' + token, 'Content-Type': 'application/json',
                   'User-Agent': 'Mozilla/5.0'}
-        gpn = str(self.et_text1.get())
+        gpn = str(self.et_text1.get()).upper()
         gpn = gpn.strip()
         param = {'gpn': gpn, 'page': '0', 'size': '25'}
         r = requests.get('https://transact.ti.com/v1/store/products/', headers=header, params=param)
