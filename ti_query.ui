@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <interface version="1.1">
   <object class="tk.Toplevel" id="toplevel1">
-    <property name="geometry">1280x768</property>
+    <property name="geometry">1400x1050</property>
     <property name="title" translatable="yes">TI Information Tool</property>
     <child>
       <object class="pygubu.builder.widgets.toplevelmenu" id="toplevelmenu1">
@@ -41,9 +41,11 @@
         <property name="relief">groove</property>
         <property name="text" translatable="yes">Login</property>
         <property name="width">200</property>
-        <layout manager="pack">
+        <layout manager="grid">
+          <property name="column">0</property>
           <property name="propagate">True</property>
-          <property name="side">top</property>
+          <property name="row">1</property>
+          <property name="sticky">nw</property>
         </layout>
         <child>
           <object class="ttk.Button" id="btn_login">
@@ -89,12 +91,13 @@
       <object class="ttk.Labelframe" id="labelframe2">
         <property name="height">330</property>
         <property name="text" translatable="yes">Ordereable Query</property>
-        <property name="width">400</property>
-        <layout manager="pack">
-          <property name="ipadx">300</property>
-          <property name="ipady">0</property>
+        <property name="width">1000</property>
+        <layout manager="grid">
+          <property name="column">0</property>
           <property name="propagate">True</property>
-          <property name="side">top</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+          <property type="row" id="2" name="weight">0</property>
         </layout>
         <child>
           <object class="ttk.Label" id="label3">
@@ -247,11 +250,12 @@
       <object class="ttk.Labelframe" id="labelframe3">
         <property name="height">330</property>
         <property name="text" translatable="yes">TI Store Query</property>
-        <property name="width">400</property>
-        <layout manager="pack">
-          <property name="ipadx">300</property>
+        <property name="width">1000</property>
+        <layout manager="grid">
+          <property name="column">0</property>
           <property name="propagate">True</property>
-          <property name="side">top</property>
+          <property name="row">3</property>
+          <property name="sticky">sw</property>
         </layout>
         <child>
           <object class="ttk.Label" id="label2">
@@ -400,6 +404,87 @@
               <property name="x">225</property>
               <property name="y">0</property>
             </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Labelframe" id="labelframe5">
+        <property name="height">0</property>
+        <property name="text" translatable="yes">Details Tab</property>
+        <property name="width">0</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="ipadx">70</property>
+          <property name="ipady">0</property>
+          <property name="padx">1010</property>
+          <property name="pady">0</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">n</property>
+          <property type="row" id="2" name="weight">0</property>
+        </layout>
+        <child>
+          <object class="ttk.Treeview" id="tr_view2">
+            <property name="height">14</property>
+            <property name="selectmode">extended</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="ttk.Treeview.Column" id="Details">
+                <property name="column_anchor">w</property>
+                <property name="heading_anchor">w</property>
+                <property name="minwidth">20</property>
+                <property name="stretch">true</property>
+                <property name="text" translatable="yes">Details</property>
+                <property name="tree_column">false</property>
+                <property name="visible">true</property>
+                <property name="width">160</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Labelframe" id="labelframe6">
+        <property name="height">0</property>
+        <property name="text" translatable="yes">Details Tab</property>
+        <property name="width">0</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="ipadx">70</property>
+          <property name="ipady">0</property>
+          <property name="padx">1010</property>
+          <property name="pady">0</property>
+          <property name="propagate">True</property>
+          <property name="row">3</property>
+          <property name="sticky">n</property>
+        </layout>
+        <child>
+          <object class="ttk.Treeview" id="tr_view4">
+            <property name="height">14</property>
+            <property name="selectmode">extended</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="ttk.Treeview.Column" id="column17">
+                <property name="column_anchor">w</property>
+                <property name="heading_anchor">w</property>
+                <property name="minwidth">20</property>
+                <property name="stretch">true</property>
+                <property name="text" translatable="yes">Details</property>
+                <property name="tree_column">false</property>
+                <property name="visible">true</property>
+                <property name="width">160</property>
+              </object>
+            </child>
           </object>
         </child>
       </object>
